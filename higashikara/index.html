@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" class="lang-en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HIGASHIKARA — Japanese Lacquerware</title>
+  <meta name="description" content="Handcrafted Japanese lacquerware. Traditional urushi art for the modern world." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">HIGASHI<span>KARA</span></a>
+    <ul class="nav-links">
+      <li><a href="shop.html"><span class="en">Collection</span><span class="ja">コレクション</span></a></li>
+      <li><a href="philosophy.html"><span class="en">Philosophy</span><span class="ja">哲学</span></a></li>
+      <li><a href="craftsmanship.html"><span class="en">Craftsmanship</span><span class="ja">職人技</span></a></li>
+      <li><a href="about.html"><span class="en">About</span><span class="ja">私たちについて</span></a></li>
+      <li><a href="contact.html"><span class="en">Contact</span><span class="ja">お問い合わせ</span></a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="lang-toggle" id="langToggle">日本語</button>
+      <button class="cart-btn" title="Cart">&#9680;<span class="cart-count hidden">0</span></button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-pattern"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="en">Handcrafted in Japan · Est. 1987</span>
+        <span class="ja">日本製・手作り · 1987年創業</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="en">The Art of<em>Urushi</em></span>
+        <span class="ja" style="display:none">漆の<em>美学</em></span>
+      </h1>
+      <p class="hero-subtitle">
+        <span class="en">Japanese Lacquerware · Shipped Worldwide</span>
+        <span class="ja">漆塗り工芸品 · 世界発送</span>
+      </p>
+      <p class="hero-desc">
+        <span class="en">Each piece is a living heirloom — hand-layered with traditional urushi lacquer by master craftspeople in Japan, then carefully shipped to you anywhere in the world.</span>
+        <span class="ja">一点一点が、職人の手によって丁寧に漆を重ねた生きた工芸品。世界中のお客様のもとへ、大切にお届けします。</span>
+      </p>
+      <a href="shop.html" class="btn-primary">
+        <span class="en">Explore Collection</span>
+        <span class="ja">コレクションを見る</span>
+      </a>
+      <a href="philosophy.html" class="btn-outline">
+        <span class="en">Our Story</span>
+        <span class="ja">私たちの物語</span>
+      </a>
+    </div>
+    <div class="hero-scroll">
+      <div class="hero-scroll-line"></div>
+      <span class="en">Scroll</span><span class="ja">スクロール</span>
+    </div>
+  </section>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3><span class="en">Your Cart</span><span class="ja">カート</span></h3>
+      <button class="cart-close" id="cartClose">×</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty"><span class="en">Your cart is empty.</span><span class="ja">カートは空です。</span></div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span><span class="en">Total</span><span class="ja">合計</span></span>
+        <span id="cartTotal">¥0</span>
+      </div>
+      <button class="btn-checkout" id="checkoutBtn">
+        <span class="en">Proceed to Checkout</span><span class="ja">購入手続きへ</span>
+      </button>
+      <p class="stripe-note"><span class="en">Secure payment via Stripe</span><span class="ja">Stripeによる安全な決済</span></p>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

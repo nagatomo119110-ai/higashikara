@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="lang-en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — HIGASHIKARA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">HIGASHI<span>KARA</span></a>
+    <ul class="nav-links">
+      <li><a href="shop.html"><span class="en">Collection</span><span class="ja">コレクション</span></a></li>
+      <li><a href="philosophy.html"><span class="en">Philosophy</span><span class="ja">哲学</span></a></li>
+      <li><a href="craftsmanship.html"><span class="en">Craftsmanship</span><span class="ja">職人技</span></a></li>
+      <li><a href="about.html"><span class="en">About</span><span class="ja">私たちについて</span></a></li>
+      <li><a href="contact.html"><span class="en">Contact</span><span class="ja">お問い合わせ</span></a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="lang-toggle" id="langToggle">日本語</button>
+      <button class="cart-btn" title="Cart">&#9680;<span class="cart-count hidden">0</span></button>
+    </div>
+  </nav>
+
+  <div class="shop-hero">
+    <span class="section-label">
+      <span class="en">Est. 1987, Kyoto</span><span class="ja">1987年創業、京都</span>
+    </span>
+    <h1>
+      <span class="en">About Higashikara</span>
+      <span class="ja">ヒガシカラについて</span>
+    </h1>
+    <div class="section-line" style="margin-top:1.5rem;"></div>
+  </div>
+
+  <section class="about" style="padding-top:6rem;">
+    <div class="about-inner fade-in">
+      <h2>
+        <span class="en">Bringing Japan's finest crafts<br>to the world since 1987.</span>
+        <span class="ja">1987年より、日本の最高の工芸品を<br>世界へ。</span>
+      </h2>
+      <p>
+        <span class="en">Founded in Kyoto by lacquerware collector and dealer Kenji Higashi, Higashikara began as a small atelier connecting urushi masters with international collectors who had no way to access their work.</span>
+        <span class="ja">漆器コレクター・ディーラーの東賢二によって京都で創業されたヒガシカラは、作品へのアクセス手段を持たない海外のコレクターと漆職人をつなぐ小さなアトリエとして始まりました。</span>
+      </p>
+      <p>
+        <span class="en">Today we work with a carefully chosen network of seven independent urushi masters across Kyoto, Wajima, and Aizu — each with over 20 years of practice. None of our pieces are mass-produced. Every item is made to order, inspected by hand, and shipped with full documentation.</span>
+        <span class="ja">現在は京都・輪島・会津の7人の独立した漆職人と連携しています。各職人は20年以上の経験を持ち、量産品は一切ありません。すべての作品は受注制作・手作業検品・完全な書類付きで発送されます。</span>
+      </p>
+      <p>
+        <span class="en">We believe fine craft should be accessible — not locked in a museum, but used, touched, and passed down through families. That's why we ship to over 50 countries with full customs documentation and museum-grade packaging.</span>
+        <span class="ja">優れた工芸品は美術館に閉じ込められるものではなく、使われ、触れられ、家族に受け継がれるべきだと考えています。だからこそ、完全な通関書類と美術館品質の梱包で50カ国以上へ発送しています。</span>
+      </p>
+    </div>
+  </section>
+
+  <section class="shipping fade-in">
+    <div class="section-header">
+      <span class="section-label">
+        <span class="en">Worldwide Delivery</span><span class="ja">世界発送</span>
+      </span>
+      <h2 class="section-title">
+        <span class="en">Delivered Anywhere</span><span class="ja">世界中へお届け</span>
+      </h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="shipping-grid">
+      <div class="fade-in">
+        <div class="shipping-icon">✦</div>
+        <div class="shipping-title"><span class="en">Insured Shipping</span><span class="ja">保険付き発送</span></div>
+        <p class="shipping-desc">
+          <span class="en">Every order ships with full insurance and tracking. Customs documentation included for all international orders.</span>
+          <span class="ja">全注文に保険と追跡付き。国際発送には通関書類が含まれます。</span>
+        </p>
+      </div>
+      <div class="fade-in">
+        <div class="shipping-icon">◈</div>
+        <div class="shipping-title"><span class="en">Museum-Grade Packaging</span><span class="ja">美術館品質の梱包</span></div>
+        <p class="shipping-desc">
+          <span class="en">Each piece is individually wrapped in washi paper, cushioned in a paulownia wood box, and sealed for safe transit.</span>
+          <span class="ja">和紙で包み、桐箱に収め、安全な輸送のために封をします。</span>
+        </p>
+      </div>
+      <div class="fade-in">
+        <div class="shipping-icon">◇</div>
+        <div class="shipping-title"><span class="en">Certificate of Authenticity</span><span class="ja">真正証明書</span></div>
+        <p class="shipping-desc">
+          <span class="en">Every piece includes a handwritten certificate signed by the creating artisan, in both Japanese and English.</span>
+          <span class="ja">すべての作品に、制作した職人の直筆による日英両語の真正証明書が付属します。</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:var(--surface);border-top:1px solid var(--border);padding:3rem 4rem;">
+    <div class="footer-bottom">
+      <span>© 2025 Higashikara.</span>
+      <span><span class="en">Handcrafted in Japan</span><span class="ja">日本製</span></span>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3><span class="en">Your Cart</span><span class="ja">カート</span></h3>
+      <button class="cart-close" id="cartClose">×</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty"><span class="en">Your cart is empty.</span><span class="ja">カートは空です。</span></div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span><span class="en">Total</span><span class="ja">合計</span></span>
+        <span id="cartTotal">¥0</span>
+      </div>
+      <button class="btn-checkout" id="checkoutBtn">
+        <span class="en">Proceed to Checkout</span><span class="ja">購入手続きへ</span>
+      </button>
+      <p class="stripe-note"><span class="en">Secure payment via Stripe</span><span class="ja">Stripeによる安全な決済</span></p>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

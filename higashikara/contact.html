@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" class="lang-en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — HIGASHIKARA</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-section {
+      max-width: 680px; margin: 0 auto;
+      padding: 10rem 2rem 6rem;
+    }
+    .contact-form { margin-top: 3rem; }
+    .form-group { margin-bottom: 1.8rem; }
+    .form-group label {
+      display: block;
+      font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      padding: 0.9rem 1.2rem;
+      outline: none;
+      transition: border-color 0.3s;
+      appearance: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--gold-dim); }
+    .form-group textarea { height: 140px; resize: vertical; }
+    .form-group select option { background: var(--surface2); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    .form-submit {
+      width: 100%; padding: 1rem;
+      background: var(--gold); color: var(--bg);
+      border: none; font-family: var(--font-body);
+      font-size: 0.75rem; letter-spacing: 0.2em;
+      text-transform: uppercase; cursor: pointer;
+      transition: background 0.3s; margin-top: 0.5rem;
+    }
+    .form-submit:hover { background: var(--gold-light); }
+    .contact-info {
+      margin-top: 4rem; padding-top: 3rem;
+      border-top: 1px solid var(--border);
+      display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+    }
+    .contact-info-item h4 {
+      font-size: 0.65rem; letter-spacing: 0.25em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+    .contact-info-item p {
+      font-size: 0.85rem; color: var(--text-sub);
+    }
+    .contact-info-item a {
+      color: var(--text-sub); text-decoration: none;
+      transition: color 0.3s;
+    }
+    .contact-info-item a:hover { color: var(--text); }
+    .form-success {
+      display: none; text-align: center; padding: 3rem;
+      border: 1px solid var(--gold-dim); margin-top: 2rem;
+    }
+    .form-success.show { display: block; }
+    .form-success h3 {
+      font-family: var(--font-display); font-size: 1.5rem;
+      margin-bottom: 0.8rem; color: var(--gold);
+    }
+    .form-success p { font-size: 0.85rem; color: var(--text-sub); }
+    @media (max-width: 600px) {
+      .form-row { grid-template-columns: 1fr; }
+      .contact-info { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">HIGASHI<span>KARA</span></a>
+    <ul class="nav-links">
+      <li><a href="shop.html"><span class="en">Collection</span><span class="ja">コレクション</span></a></li>
+      <li><a href="philosophy.html"><span class="en">Philosophy</span><span class="ja">哲学</span></a></li>
+      <li><a href="craftsmanship.html"><span class="en">Craftsmanship</span><span class="ja">職人技</span></a></li>
+      <li><a href="about.html"><span class="en">About</span><span class="ja">私たちについて</span></a></li>
+      <li><a href="contact.html"><span class="en">Contact</span><span class="ja">お問い合わせ</span></a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="lang-toggle" id="langToggle">日本語</button>
+      <button class="cart-btn" title="Cart">&#9680;<span class="cart-count hidden">0</span></button>
+    </div>
+  </nav>
+
+  <div class="contact-section">
+    <div class="fade-in">
+      <span class="section-label">
+        <span class="en">Get in Touch</span><span class="ja">お問い合わせ</span>
+      </span>
+      <h1 style="font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);font-weight:300;line-height:1.2;margin-top:0.5rem;">
+        <span class="en">We'd love to hear from you.</span>
+        <span class="ja">お気軽にご連絡ください。</span>
+      </h1>
+      <p style="color:var(--text-sub);margin-top:1rem;font-size:0.9rem;line-height:1.8;">
+        <span class="en">For product enquiries, custom commissions, wholesale, or shipping questions — please fill out the form below and we will respond within 2 business days.</span>
+        <span class="ja">商品のお問い合わせ、特注品のご依頼、卸売り、発送に関するご質問は、下記フォームよりご連絡ください。2営業日以内にご返答いたします。</span>
+      </p>
+    </div>
+
+    <form class="contact-form fade-in" id="contactForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label><span class="en">First Name</span><span class="ja">名</span></label>
+          <input type="text" required placeholder="John / 太郎" />
+        </div>
+        <div class="form-group">
+          <label><span class="en">Last Name</span><span class="ja">姓</span></label>
+          <input type="text" required placeholder="Smith / 山田" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label><span class="en">Email Address</span><span class="ja">メールアドレス</span></label>
+        <input type="email" required placeholder="you@example.com" />
+      </div>
+      <div class="form-group">
+        <label><span class="en">Country</span><span class="ja">お住まいの国</span></label>
+        <select>
+          <option value=""><span class="en">Select country…</span></option>
+          <option>Japan / 日本</option>
+          <option>United States</option>
+          <option>United Kingdom</option>
+          <option>France</option>
+          <option>Germany</option>
+          <option>Australia</option>
+          <option>Canada</option>
+          <option>Singapore</option>
+          <option>Hong Kong</option>
+          <option>China</option>
+          <option>South Korea</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label><span class="en">Enquiry Type</span><span class="ja">お問い合わせ種別</span></label>
+        <select>
+          <option value=""><span class="en">Select type…</span></option>
+          <option><span class="en">Product Question</span> / 商品について</option>
+          <option><span class="en">Custom Commission</span> / 特注品</option>
+          <option><span class="en">Wholesale</span> / 卸売り</option>
+          <option><span class="en">Shipping &amp; Returns</span> / 配送・返品</option>
+          <option><span class="en">Other</span> / その他</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label><span class="en">Message</span><span class="ja">メッセージ</span></label>
+        <textarea required placeholder="Your message… / メッセージをどうぞ…"></textarea>
+      </div>
+      <button type="submit" class="form-submit">
+        <span class="en">Send Message</span><span class="ja">送信する</span>
+      </button>
+    </form>
+
+    <div class="form-success" id="formSuccess">
+      <h3><span class="en">Message Sent</span><span class="ja">送信完了</span></h3>
+      <p>
+        <span class="en">Thank you for reaching out. We will reply within 2 business days.</span>
+        <span class="ja">お問い合わせありがとうございます。2営業日以内にご返答いたします。</span>
+      </p>
+    </div>
+
+    <div class="contact-info fade-in">
+      <div class="contact-info-item">
+        <h4><span class="en">Email</span><span class="ja">メール</span></h4>
+        <p><a href="mailto:info@higashikara.com">info@higashikara.com</a></p>
+      </div>
+      <div class="contact-info-item">
+        <h4><span class="en">Response Time</span><span class="ja">返答時間</span></h4>
+        <p><span class="en">Within 2 business days</span><span class="ja">2営業日以内</span></p>
+      </div>
+      <div class="contact-info-item">
+        <h4><span class="en">Location</span><span class="ja">所在地</span></h4>
+        <p>Kyoto, Japan / 京都</p>
+      </div>
+      <div class="contact-info-item">
+        <h4><span class="en">Shipping</span><span class="ja">発送</span></h4>
+        <p><span class="en">50+ countries worldwide</span><span class="ja">世界50カ国以上</span></p>
+      </div>
+    </div>
+  </div>
+
+  <footer style="background:var(--surface);border-top:1px solid var(--border);padding:3rem 4rem;">
+    <div class="footer-bottom">
+      <span>© 2025 Higashikara.</span>
+      <span><span class="en">Handcrafted in Japan</span><span class="ja">日本製</span></span>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3><span class="en">Your Cart</span><span class="ja">カート</span></h3>
+      <button class="cart-close" id="cartClose">×</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty"><span class="en">Your cart is empty.</span><span class="ja">カートは空です。</span></div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span><span class="en">Total</span><span class="ja">合計</span></span>
+        <span id="cartTotal">¥0</span>
+      </div>
+      <button class="btn-checkout" id="checkoutBtn">
+        <span class="en">Proceed to Checkout</span><span class="ja">購入手続きへ</span>
+      </button>
+      <p class="stripe-note"><span class="en">Secure payment via Stripe</span><span class="ja">Stripeによる安全な決済</span></p>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      this.style.display = 'none';
+      document.getElementById('formSuccess').classList.add('show');
+    });
+  </script>
+</body>
+</html>

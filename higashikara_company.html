@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>株式会社ヒガシカラ — 会社概要</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500&family=Noto+Serif+JP:wght@200;300;400&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --black: #0a1f5c;
+      --gray-dark: #1a3a7a;
+      --gray-mid: #4a6fa8;
+      --gray-light: #8aaad4;
+      --rule: #c5d6ee;
+      --bg: #ffffff;
+      --bg-warm: #f0f5fc;
+      --blue: #1a56c4;
+      --serif: 'Noto Serif JP', 'Cormorant Garamond', serif;
+      --sans: 'Inter', 'Noto Sans JP', sans-serif;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--black);
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ===== NAV ===== */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 60px;
+      background: rgba(240,245,252,0.97);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .nav-company {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: 1rem;
+      letter-spacing: 0.15em;
+      color: var(--black);
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 36px;
+    }
+
+    .nav-links a {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gray-mid);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--black); }
+
+    .nav-logo svg { width: 44px; height: 44px; display: block; }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 60px 80px;
+      border-bottom: 1px solid var(--rule);
+      background: var(--bg);
+      position: relative;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gray-light);
+      margin-bottom: 28px;
+    }
+
+    .hero-headline {
+      font-family: var(--serif);
+      font-weight: 200;
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
+      line-height: 1.45;
+      color: var(--black);
+      max-width: 820px;
+      margin-bottom: 40px;
+    }
+
+    .hero-headline em {
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .hero-sub {
+      font-size: 0.88rem;
+      color: var(--gray-mid);
+      line-height: 2;
+      max-width: 480px;
+      margin-bottom: 56px;
+    }
+
+    .hero-scroll {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gray-light);
+    }
+
+    .hero-scroll::before {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: var(--gray-light);
+    }
+
+    .hero-logo-bg {
+      position: absolute;
+      right: 60px;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.04;
+    }
+
+    .hero-logo-bg svg { width: 420px; height: 420px; }
+
+    /* ===== SECTION BASE ===== */
+    section {
+      padding: 120px 60px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .section-tag {
+      font-size: 0.68rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gray-light);
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(1.6rem, 3vw, 2.6rem);
+      line-height: 1.4;
+      color: var(--black);
+      margin-bottom: 64px;
+    }
+
+    /* ===== LOGO SECTION ===== */
+    .logo-section {
+      background: var(--bg-warm);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .logo-section-visual {
+      display: flex;
+      justify-content: center;
+    }
+
+    .logo-section-visual svg {
+      width: 200px;
+      height: 200px;
+    }
+
+    .logo-section-text h2 { margin-bottom: 32px; }
+
+    .logo-text-body {
+      font-size: 0.95rem;
+      color: var(--gray-dark);
+      line-height: 2.2;
+    }
+
+    .logo-text-body p + p { margin-top: 20px; }
+
+    .logo-keyword {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--blue);
+      border: 1px solid var(--blue);
+      padding: 3px 10px;
+      margin-right: 8px;
+      margin-top: 24px;
+    }
+
+    /* ===== MVV ===== */
+    .mvv-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--rule);
+      border: 1px solid var(--rule);
+    }
+
+    .mvv-card {
+      background: var(--bg);
+      padding: 48px 40px;
+    }
+
+    .mvv-tag {
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gray-light);
+      margin-bottom: 28px;
+    }
+
+    .mvv-card h3 {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: 1.2rem;
+      line-height: 1.7;
+      color: var(--black);
+      margin-bottom: 24px;
+    }
+
+    .mvv-card p {
+      font-size: 0.88rem;
+      color: var(--gray-mid);
+      line-height: 2;
+    }
+
+    /* ===== VALUE ===== */
+    .value-section { background: var(--bg-warm); }
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--rule);
+      border: 1px solid var(--rule);
+      max-width: 860px;
+    }
+
+    .value-item {
+      background: var(--bg-warm);
+      padding: 40px 36px;
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+    }
+
+    .value-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--rule);
+      line-height: 1;
+      flex-shrink: 0;
+      width: 40px;
+    }
+
+    .value-item-text strong {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--black);
+      margin-bottom: 8px;
+    }
+
+    .value-item-text p {
+      font-size: 0.82rem;
+      color: var(--gray-mid);
+      line-height: 1.9;
+    }
+
+    /* ===== BUSINESS ===== */
+    .business-list {
+      max-width: 680px;
+    }
+
+    .biz-item {
+      display: flex;
+      align-items: baseline;
+      gap: 24px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--rule);
+      font-size: 0.95rem;
+      color: var(--gray-dark);
+      line-height: 1.7;
+    }
+
+    .biz-item:first-child { border-top: 1px solid var(--rule); }
+
+    .biz-n {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: var(--rule);
+      flex-shrink: 0;
+      width: 28px;
+    }
+
+    /* ===== COMPANY INFO ===== */
+    .info-section { background: var(--black); color: white; }
+
+    .info-section .section-tag { color: rgba(255,255,255,0.3); }
+    .info-section h2 { color: white; }
+
+    .info-table {
+      width: 100%;
+      max-width: 760px;
+      border-collapse: collapse;
+    }
+
+    .info-table tr { border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .info-table tr:last-child { border-bottom: none; }
+
+    .info-table th {
+      text-align: left;
+      padding: 22px 0;
+      width: 200px;
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      vertical-align: top;
+    }
+
+    .info-table td {
+      padding: 22px 0;
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.8;
+    }
+
+    .info-table td a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--black);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 48px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-left svg { width: 32px; height: 32px; }
+
+    .footer-name {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 0.1em;
+    }
+
+    .footer-right {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.1em;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      nav { padding: 20px 24px; }
+      .nav-links { display: none; }
+      .hero { padding: 100px 24px 60px; }
+      section { padding: 80px 24px; }
+      .logo-section { grid-template-columns: 1fr; gap: 40px; padding: 80px 24px; }
+      .mvv-grid { grid-template-columns: 1fr; }
+      .value-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 16px; padding: 40px 24px; text-align: center; }
+      .hero-logo-bg { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <div class="nav-left">
+    <span class="nav-company">株式会社ヒガシカラ</span>
+    <ul class="nav-links">
+      <li><a href="#mvv">Mission</a></li>
+      <li><a href="#value">Value</a></li>
+      <li><a href="#business">事業</a></li>
+      <li><a href="#info">会社情報</a></li>
+    </ul>
+  </div>
+  <div class="nav-logo">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="g0" x1="100%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#5ab3f0"/>
+          <stop offset="100%" stop-color="#0a3080"/>
+        </linearGradient>
+      </defs>
+      <polygon points="100,12 174,54 174,146 100,188 26,146 26,54"
+               fill="none" stroke="url(#g0)" stroke-width="8" stroke-linejoin="round"/>
+      <polygon points="100,50 134,69 134,131 100,150 66,131 66,69"
+               fill="none" stroke="url(#g0)" stroke-width="8" stroke-linejoin="round"/>
+      <line x1="10" y1="100" x2="190" y2="100"
+            stroke="url(#g0)" stroke-width="8" stroke-linecap="round"/>
+      <path d="M 162,24 C 192,44 125,72 100,100 C 75,128 8,156 38,176"
+            fill="none" stroke="url(#g0)" stroke-width="8" stroke-linecap="round"/>
+    </svg>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-logo-bg">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="gbg" x1="100%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#5ab3f0"/>
+          <stop offset="100%" stop-color="#0a3080"/>
+        </linearGradient>
+      </defs>
+      <polygon points="100,12 174,54 174,146 100,188 26,146 26,54"
+               fill="none" stroke="url(#gbg)" stroke-width="8" stroke-linejoin="round"/>
+      <polygon points="100,50 134,69 134,131 100,150 66,131 66,69"
+               fill="none" stroke="url(#gbg)" stroke-width="8" stroke-linejoin="round"/>
+      <line x1="10" y1="100" x2="190" y2="100"
+            stroke="url(#gbg)" stroke-width="8" stroke-linecap="round"/>
+      <path d="M 162,24 C 192,44 125,72 100,100 C 75,128 8,156 38,176"
+            fill="none" stroke="url(#gbg)" stroke-width="8" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <p class="hero-eyebrow">Higashikara Inc. — Company Overview</p>
+  <h1 class="hero-headline">
+    AIとソフトウェアの力で<br>
+    <em>東北からいい人・いいモノを届ける。</em>
+  </h1>
+  <p class="hero-sub">
+    テクノロジーの力で東北に眠る才能や価値を"形"にし、<br>
+    地域から新しい産業と人材を生み出すことを使命としています。
+  </p>
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+<!-- ===== LOGO ===== -->
+<section class="logo-section">
+  <div class="logo-section-visual">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="g1" x1="100%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#5ab3f0"/>
+          <stop offset="100%" stop-color="#0a3080"/>
+        </linearGradient>
+      </defs>
+      <polygon points="100,12 174,54 174,146 100,188 26,146 26,54"
+               fill="none" stroke="url(#g1)" stroke-width="8" stroke-linejoin="round"/>
+      <polygon points="100,50 134,69 134,131 100,150 66,131 66,69"
+               fill="none" stroke="url(#g1)" stroke-width="8" stroke-linejoin="round"/>
+      <line x1="10" y1="100" x2="190" y2="100"
+            stroke="url(#g1)" stroke-width="8" stroke-linecap="round"/>
+      <path d="M 162,24 C 192,44 125,72 100,100 C 75,128 8,156 38,176"
+            fill="none" stroke="url(#g1)" stroke-width="8" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div class="logo-section-text">
+    <p class="section-tag">Brand Identity</p>
+    <h2>ロゴに<br>込めた想い</h2>
+    <div class="logo-text-body">
+      <p>青の濃淡で構成された六角形のロゴは、<strong>「東北から世界へ伸びる軌跡」</strong>を象徴しています。</p>
+      <p>中央を走る滑らかなカーブは、<strong>人・技術・地域をつなぐ成長のライン</strong>を表現。</p>
+      <p>白と濃い青のコントラストは、誠実さ・透明性・未来志向を示し、テクノロジー企業としての信頼感を形にしています。</p>
+      <div>
+        <span class="logo-keyword">誠実さ</span>
+        <span class="logo-keyword">透明性</span>
+        <span class="logo-keyword">未来志向</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MVV ===== -->
+<section id="mvv">
+  <p class="section-tag">Mission / Vision / Value</p>
+  <h2>私たちが<br>目指す姿</h2>
+  <div class="mvv-grid">
+    <div class="mvv-card">
+      <p class="mvv-tag">Mission</p>
+      <h3>AIとソフトウェアの力で東北からいい人・いいモノを届ける。</h3>
+      <p>テクノロジーの力で東北に眠る才能や価値を"形"にし、地域から新しい産業と人材を生み出すことを使命としています。</p>
+    </div>
+    <div class="mvv-card">
+      <p class="mvv-tag">Vision</p>
+      <h3>どんな人でも東北で活躍できる場所を作る。</h3>
+      <p>都市部に行かなければ挑戦できない時代を終わらせる。AI・ソフトウェア・インターネットを活用し、「東北にいながら世界と戦える環境」を創り出します。</p>
+    </div>
+    <div class="mvv-card">
+      <p class="mvv-tag">Value</p>
+      <h3>東北の価値を<br>10倍にする。</h3>
+      <p>地域の才能を発掘・育成し、地元企業のDX・AI活用を加速させ、東北発のプロダクトを世界へ届けます。ロゴのグラデーションは価値が増幅していくプロセスを象徴。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VALUE ===== -->
+<section id="value" class="value-section">
+  <p class="section-tag">Our Values</p>
+  <h2>4つの<br>価値</h2>
+  <div class="value-grid">
+    <div class="value-item">
+      <span class="value-num">01</span>
+      <div class="value-item-text">
+        <strong>地域の才能を発掘し、育てる</strong>
+        <p>東北に眠る人材の可能性を最大化します。</p>
+      </div>
+    </div>
+    <div class="value-item">
+      <span class="value-num">02</span>
+      <div class="value-item-text">
+        <strong>地元企業のDX・AI活用を加速させる</strong>
+        <p>最先端技術で地域産業の変革を後押しします。</p>
+      </div>
+    </div>
+    <div class="value-item">
+      <span class="value-num">03</span>
+      <div class="value-item-text">
+        <strong>東北発のプロダクトを世界へ届ける</strong>
+        <p>地域発のプロダクトでグローバルに挑戦します。</p>
+      </div>
+    </div>
+    <div class="value-item">
+      <span class="value-num">04</span>
+      <div class="value-item-text">
+        <strong>東北の価値を10倍にする</strong>
+        <p>増幅する価値をロゴのグラデーションで体現します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BUSINESS ===== -->
+<section id="business">
+  <p class="section-tag">Business</p>
+  <h2>事業内容</h2>
+  <div class="business-list">
+    <div class="biz-item">
+      <span class="biz-n">1</span>
+      インターネットを利用した情報提供サービス
+    </div>
+    <div class="biz-item">
+      <span class="biz-n">2</span>
+      Webサイト・ECサイトの企画、制作、販売、運営
+    </div>
+    <div class="biz-item">
+      <span class="biz-n">3</span>
+      通信・情報処理機器およびアプリケーションの開発・販売・輸出入
+    </div>
+    <div class="biz-item">
+      <span class="biz-n">4</span>
+      マーケティングリサーチ業務
+    </div>
+    <div class="biz-item">
+      <span class="biz-n">5</span>
+      上記に付帯・関連するすべての事業
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMPANY INFO ===== -->
+<section id="info" class="info-section">
+  <p class="section-tag">Company Info</p>
+  <h2>会社情報</h2>
+  <table class="info-table">
+    <tr>
+      <th>Company</th>
+      <td>株式会社ヒガシカラ</td>
+    </tr>
+    <tr>
+      <th>Address</th>
+      <td>福島県郡山市富田町字下西田56-5</td>
+    </tr>
+    <tr>
+      <th>Directors</th>
+      <td>代表取締役　馬場俊輔<br>代表取締役　長屋智洋</td>
+    </tr>
+    <tr>
+      <th>Capital</th>
+      <td>100円（発行済株式 100株 / 1株＝1円）</td>
+    </tr>
+    <tr>
+      <th>Fiscal Year</th>
+      <td>6月1日 〜 翌5月31日</td>
+    </tr>
+    <tr>
+      <th>Website</th>
+      <td><a href="https://higashikara.biz">https://higashikara.biz</a></td>
+    </tr>
+    <tr>
+      <th>Established</th>
+      <td>2025年6月（登記予定）</td>
+    </tr>
+  </table>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-left">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="gf" x1="100%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#5ab3f0"/>
+          <stop offset="100%" stop-color="#0a3080"/>
+        </linearGradient>
+      </defs>
+      <polygon points="100,12 174,54 174,146 100,188 26,146 26,54"
+               fill="none" stroke="url(#gf)" stroke-width="8" stroke-linejoin="round"/>
+      <polygon points="100,50 134,69 134,131 100,150 66,131 66,69"
+               fill="none" stroke="url(#gf)" stroke-width="8" stroke-linejoin="round"/>
+      <line x1="10" y1="100" x2="190" y2="100"
+            stroke="url(#gf)" stroke-width="8" stroke-linecap="round"/>
+      <path d="M 162,24 C 192,44 125,72 100,100 C 75,128 8,156 38,176"
+            fill="none" stroke="url(#gf)" stroke-width="8" stroke-linecap="round"/>
+    </svg>
+    <span class="footer-name">株式会社ヒガシカラ</span>
+  </div>
+  <span class="footer-right">© 2025 HIGASHIKARA Inc.</span>
+</footer>
+
+</body>
+</html>

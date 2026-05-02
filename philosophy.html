@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" class="lang-en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Philosophy — HIGASHIKARA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">HIGASHI<span>KARA</span></a>
+    <ul class="nav-links">
+      <li><a href="shop.html"><span class="en">Collection</span><span class="ja">コレクション</span></a></li>
+      <li><a href="philosophy.html"><span class="en">Philosophy</span><span class="ja">哲学</span></a></li>
+      <li><a href="craftsmanship.html"><span class="en">Craftsmanship</span><span class="ja">職人技</span></a></li>
+      <li><a href="about.html"><span class="en">About</span><span class="ja">私たちについて</span></a></li>
+      <li><a href="contact.html"><span class="en">Contact</span><span class="ja">お問い合わせ</span></a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="lang-toggle" id="langToggle">日本語</button>
+      <button class="cart-btn" title="Cart">&#9680;<span class="cart-count hidden">0</span></button>
+    </div>
+  </nav>
+
+  <section class="philosophy" style="padding-top: 10rem;">
+    <div class="philosophy-grid">
+      <div class="philosophy-visual fade-in">
+        <div class="lacquer-art">
+          <div class="lacquer-kanji">漆</div>
+        </div>
+      </div>
+      <div class="philosophy-text fade-in">
+        <span class="section-label">
+          <span class="en">Our Philosophy</span>
+          <span class="ja">私たちの哲学</span>
+        </span>
+        <h2>
+          <span class="en">Beauty refined<br>over centuries.</span>
+          <span class="ja">何世紀にもわたって<br>磨かれた美しさ。</span>
+        </h2>
+        <p>
+          <span class="en">Higashikara — meaning "from the East" — was founded with a single purpose: to bring the timeless art of Japanese lacquerware to the world, without compromise.</span>
+          <span class="ja">「東から」を意味するヒガシカラは、妥協なく日本の漆芸を世界へ届けるという一つの目的のもと設立されました。</span>
+        </p>
+        <p>
+          <span class="en">Every piece undergoes over 30 layers of hand-applied urushi lacquer, each allowed to cure naturally in a humidity-controlled environment. The process takes months. The result lasts generations.</span>
+          <span class="ja">すべての作品は、湿度管理された環境で自然乾燥させながら、30層以上の漆を手作業で塗り重ねます。工程には数ヶ月を要し、その結果は世代を超えて受け継がれます。</span>
+        </p>
+        <p>
+          <span class="en">We believe that beauty is not decoration — it is integrity. A lacquered bowl that has been used daily for 50 years is more beautiful than one left untouched in a glass case. We make things to be lived with.</span>
+          <span class="ja">美しさとは装飾ではなく、誠実さだと私たちは信じています。50年間毎日使われてきた漆椀は、ガラスケースの中に置かれたままのものより美しい。私たちは、共に生きるものを作ります。</span>
+        </p>
+        <div class="philosophy-stats">
+          <div>
+            <div class="stat-number">30+</div>
+            <div class="stat-label"><span class="en">Lacquer Layers</span><span class="ja">漆の重ね塗り</span></div>
+          </div>
+          <div>
+            <div class="stat-number">90</div>
+            <div class="stat-label"><span class="en">Days per Piece</span><span class="ja">制作日数</span></div>
+          </div>
+          <div>
+            <div class="stat-number">37</div>
+            <div class="stat-label"><span class="en">Years of Craft</span><span class="ja">工芸の年月</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:var(--surface);border-top:1px solid var(--border);padding:3rem 4rem;">
+    <div class="footer-bottom">
+      <span>© 2025 Higashikara.</span>
+      <span><span class="en">Handcrafted in Japan</span><span class="ja">日本製</span></span>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3><span class="en">Your Cart</span><span class="ja">カート</span></h3>
+      <button class="cart-close" id="cartClose">×</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty"><span class="en">Your cart is empty.</span><span class="ja">カートは空です。</span></div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span><span class="en">Total</span><span class="ja">合計</span></span>
+        <span id="cartTotal">¥0</span>
+      </div>
+      <button class="btn-checkout" id="checkoutBtn">
+        <span class="en">Proceed to Checkout</span><span class="ja">購入手続きへ</span>
+      </button>
+      <p class="stripe-note"><span class="en">Secure payment via Stripe</span><span class="ja">Stripeによる安全な決済</span></p>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

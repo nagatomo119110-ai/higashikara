@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" class="lang-en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collection — HIGASHIKARA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav>
+    <a href="index.html" class="nav-logo">HIGASHI<span>KARA</span></a>
+    <ul class="nav-links">
+      <li><a href="shop.html"><span class="en">Collection</span><span class="ja">コレクション</span></a></li>
+      <li><a href="philosophy.html"><span class="en">Philosophy</span><span class="ja">哲学</span></a></li>
+      <li><a href="craftsmanship.html"><span class="en">Craftsmanship</span><span class="ja">職人技</span></a></li>
+      <li><a href="about.html"><span class="en">About</span><span class="ja">私たちについて</span></a></li>
+      <li><a href="contact.html"><span class="en">Contact</span><span class="ja">お問い合わせ</span></a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="lang-toggle" id="langToggle">日本語</button>
+      <button class="cart-btn" title="Cart">
+        &#9680;
+        <span class="cart-count hidden">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── Shop Hero ── -->
+  <div class="shop-hero">
+    <span class="section-label">
+      <span class="en">Higashikara</span>
+      <span class="ja">ヒガシカラ</span>
+    </span>
+    <h1>
+      <span class="en">The Collection</span>
+      <span class="ja">コレクション</span>
+    </h1>
+    <div class="section-line" style="margin-top: 1.5rem;"></div>
+  </div>
+
+  <!-- ── Filters ── -->
+  <div class="shop-filters">
+    <button class="filter-btn active" data-filter="all">
+      <span class="en">All</span><span class="ja">すべて</span>
+    </button>
+    <button class="filter-btn" data-filter="tableware">
+      <span class="en">Tableware</span><span class="ja">食器</span>
+    </button>
+    <button class="filter-btn" data-filter="celebration">
+      <span class="en">Celebration</span><span class="ja">祝い品</span>
+    </button>
+    <button class="filter-btn" data-filter="serving">
+      <span class="en">Serving</span><span class="ja">お盆</span>
+    </button>
+    <button class="filter-btn" data-filter="tea">
+      <span class="en">Tea Ceremony</span><span class="ja">茶道</span>
+    </button>
+  </div>
+
+  <!-- ── Products Grid ── -->
+  <section class="shop-grid-section">
+    <div class="products-grid">
+
+      <!-- Bowl -->
+      <div class="product-card fade-in" id="bowl" data-category="tableware">
+        <div class="product-img">
+          <div class="product-img-inner lacquer-1"></div>
+          <div class="product-kanji">椀</div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">
+            <span class="en">Tableware</span><span class="ja">食器</span>
+          </div>
+          <div class="product-name">
+            <span class="en">Vermilion Lacquer Bowl</span>
+            <span class="ja">朱塗り椀</span>
+          </div>
+          <div class="product-name-ja">Shunuri-wan</div>
+          <p class="product-desc">
+            <span class="en">A deep bowl finished in classic vermilion urushi. Hand-turned keyaki zelkova wood base. Suitable for daily use and dishwasher-safe (gentle cycle).</span>
+            <span class="ja">朱漆で仕上げた汁椀。手挽きの欅材を使用。毎日のご使用にも適しています（優しい水流で食洗機可）。</span>
+          </p>
+          <div class="product-footer">
+            <div>
+              <div class="product-price">¥50,000</div>
+              <div class="product-price-sub">approx. USD $333</div>
+            </div>
+            <button class="btn-add" onclick="addToCart('bowl', 'Vermilion Lacquer Bowl', '朱塗り椀', 50000, 'lacquer-1')">
+              <span class="en">Add to Cart</span><span class="ja">カートに追加</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jubako -->
+      <div class="product-card fade-in" id="jubako" data-category="celebration">
+        <div class="product-img">
+          <div class="product-img-inner lacquer-2"></div>
+          <div class="product-kanji">重</div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">
+            <span class="en">Celebration</span><span class="ja">祝い品</span>
+          </div>
+          <div class="product-name">
+            <span class="en">Black Jubako Box</span>
+            <span class="ja">黒塗り重箱</span>
+          </div>
+          <div class="product-name-ja">Kuronuri-jūbako</div>
+          <p class="product-desc">
+            <span class="en">Three-tiered stacking box in deep kuro-urushi black with gold makie inlay. Traditionally used for New Year's osechi cuisine.</span>
+            <span class="ja">黒漆に金蒔絵を施した三段重箱。お正月のおせち料理など、晴れの席に添える逸品です。</span>
+          </p>
+          <div class="product-footer">
+            <div>
+              <div class="product-price">¥50,000</div>
+              <div class="product-price-sub">approx. USD $333</div>
+            </div>
+            <button class="btn-add" onclick="addToCart('jubako', 'Black Jubako Box', '黒塗り重箱', 50000, 'lacquer-2')">
+              <span class="en">Add to Cart</span><span class="ja">カートに追加</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tray -->
+      <div class="product-card fade-in" id="tray" data-category="serving">
+        <div class="product-img">
+          <div class="product-img-inner lacquer-3"></div>
+          <div class="product-kanji">盆</div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">
+            <span class="en">Serving</span><span class="ja">お盆</span>
+          </div>
+          <div class="product-name">
+            <span class="en">Midnight Serving Tray</span>
+            <span class="ja">深夜色塗り盆</span>
+          </div>
+          <div class="product-name-ja">Shinnya-nuri-bon</div>
+          <p class="product-desc">
+            <span class="en">A large rectangular serving tray in midnight-blue urushi with subtle gold cloud motif. A centrepiece for any table.</span>
+            <span class="ja">深みのある藍漆に金雲模様を施した大型角盆。テーブルの主役となる一枚です。</span>
+          </p>
+          <div class="product-footer">
+            <div>
+              <div class="product-price">¥50,000</div>
+              <div class="product-price-sub">approx. USD $333</div>
+            </div>
+            <button class="btn-add" onclick="addToCart('tray', 'Midnight Serving Tray', '深夜色塗り盆', 50000, 'lacquer-3')">
+              <span class="en">Add to Cart</span><span class="ja">カートに追加</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Teacup -->
+      <div class="product-card fade-in" id="teacup" data-category="tea">
+        <div class="product-img">
+          <div class="product-img-inner lacquer-4"></div>
+          <div class="product-kanji">茶</div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">
+            <span class="en">Tea Ceremony</span><span class="ja">茶道</span>
+          </div>
+          <div class="product-name">
+            <span class="en">Golden Tea Saucer Set</span>
+            <span class="ja">金彩茶托セット</span>
+          </div>
+          <div class="product-name-ja">Kinsai-chataku set (×5)</div>
+          <p class="product-desc">
+            <span class="en">A set of five tea saucers in warm amber urushi with hand-painted gold leaf motifs. Each piece is unique. Includes paulownia storage box.</span>
+            <span class="ja">金箔模様を手描きした温かみのある琥珀漆の茶托5枚セット。一点一点が一物です。桐箱付き。</span>
+          </p>
+          <div class="product-footer">
+            <div>
+              <div class="product-price">¥50,000</div>
+              <div class="product-price-sub">approx. USD $333</div>
+            </div>
+            <button class="btn-add" onclick="addToCart('teacup', 'Golden Tea Saucer Set', '金彩茶托セット', 50000, 'lacquer-4')">
+              <span class="en">Add to Cart</span><span class="ja">カートに追加</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sake Cup Set -->
+      <div class="product-card fade-in" data-category="tableware">
+        <div class="product-img">
+          <div class="product-img-inner lacquer-1" style="background: radial-gradient(ellipse at 55% 45%, #7a2020 0%, #3a0d0d 35%, #180505 65%, #0a0202 100%)"></div>
+          <div class="product-kanji">盃</div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">
+            <span class="en">Tableware</span><span class="ja">食器</span>
+          </div>
+          <div class="product-name">
+            <span class="en">Ceremonial Sake Cup Pair</span>
+            <span class="ja">儀式用盃一対</span>
+          </div>
+          <div class="product-name-ja">Sakazuki hitotoi (pair)</div>
+          <p class="product-desc">
+            <span class="en">A matched pair of flat sake cups (sakazuki) in cinnabar red and black, traditionally exchanged at wedding ceremonies.</span>
+            <span class="ja">朱と黒の平盃一対。伝統的な婚礼の儀式などで使われる格調ある盃です。</span>
+          </p>
+          <div class="product-footer">
+            <div>
+              <div class="product-price">¥50,000</div>
+              <div class="product-price-sub">approx. USD $333</div>
+            </div>
+            <button class="btn-add" onclick="addToCart('sakecup', 'Ceremonial Sake Cup Pair', '儀式用盃一対', 50000, 'lacquer-1')">
+              <span class="en">Add to Cart</span><span class="ja">カートに追加</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Incense Box -->
+      <div class="product-card fade-in" data-category="celebration">
+        <div class="product-img">
+          <div class="product-img-inner lacquer-4" style="background: radial-gradient(ellipse at 40% 50%, #1a1200 0%, #0d0c02 40%, #050500 70%, #020200 100%)"></div>
+          <div class="product-kanji">香</div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">
+            <span class="en">Celebration</span><span class="ja">祝い品</span>
+          </div>
+          <div class="product-name">
+            <span class="en">Gold Makie Incense Box</span>
+            <span class="ja">金蒔絵香箱</span>
+          </div>
+          <div class="product-name-ja">Kō-bako with gold makie</div>
+          <p class="product-desc">
+            <span class="en">A small kō-bako (incense box) finished in deep black with elaborate gold makie cherry blossom design. A masterwork of miniature lacquer art.</span>
+            <span class="ja">黒地に精緻な金蒔絵の桜模様を施した香箱。小さな漆芸の傑作です。</span>
+          </p>
+          <div class="product-footer">
+            <div>
+              <div class="product-price">¥50,000</div>
+              <div class="product-price-sub">approx. USD $333</div>
+            </div>
+            <button class="btn-add" onclick="addToCart('incense', 'Gold Makie Incense Box', '金蒔絵香箱', 50000, 'lacquer-2')">
+              <span class="en">Add to Cart</span><span class="ja">カートに追加</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">HIGASHI<span>KARA</span></a>
+        <p>
+          <span class="en">Traditional Japanese lacquerware, handcrafted by masters and shipped worldwide.</span>
+          <span class="ja">職人の手による伝統的な日本の漆器を世界へ。</span>
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4><span class="en">Shop</span><span class="ja">ショップ</span></h4>
+        <ul>
+          <li><a href="shop.html"><span class="en">All Products</span><span class="ja">全商品</span></a></li>
+          <li><a href="#tableware"><span class="en">Tableware</span><span class="ja">食器</span></a></li>
+          <li><a href="#celebration"><span class="en">Celebration</span><span class="ja">祝い品</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4><span class="en">Info</span><span class="ja">情報</span></h4>
+        <ul>
+          <li><a href="about.html"><span class="en">About Us</span><span class="ja">会社概要</span></a></li>
+          <li><a href="craftsmanship.html"><span class="en">Craftsmanship</span><span class="ja">職人技</span></a></li>
+          <li><a href="about.html"><span class="en">Shipping</span><span class="ja">配送</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4><span class="en">Contact</span><span class="ja">連絡先</span></h4>
+        <ul>
+          <li><a href="mailto:info@higashikara.com">info@higashikara.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Higashikara.</span>
+      <span><span class="en">Handcrafted in Japan</span><span class="ja">日本製</span></span>
+    </div>
+  </footer>
+
+  <!-- ── Cart Drawer ── -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3><span class="en">Your Cart</span><span class="ja">カート</span></h3>
+      <button class="cart-close" id="cartClose">×</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty">
+        <span class="en">Your cart is empty.</span>
+        <span class="ja">カートは空です。</span>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span><span class="en">Total</span><span class="ja">合計</span></span>
+        <span id="cartTotal">¥0</span>
+      </div>
+      <button class="btn-checkout" id="checkoutBtn">
+        <span class="en">Proceed to Checkout</span>
+        <span class="ja">購入手続きへ</span>
+      </button>
+      <p class="stripe-note">
+        <span class="en">Secure payment via Stripe</span>
+        <span class="ja">Stripeによる安全な決済</span>
+      </p>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+  <script>
+    // Filter functionality
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.product-card').forEach(card => {
+          const show = filter === 'all' || card.dataset.category === filter;
+          card.style.display = show ? 'block' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
